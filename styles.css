@@ -55,7 +55,11 @@ body, .logo, .background {
     opacity: 0.8;
 }
 
-a{
+.watermark a{
     color: white;
+}
+
+label{
+    text-transform: uppercase;
 }
 
