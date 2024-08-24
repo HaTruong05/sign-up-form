@@ -1,3 +1,8 @@
+@font-face {
+    font-family: logo-font;
+    src: url(assets/Norse-Bold.otf);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -14,10 +19,43 @@ img{
     max-height: 100%;
 }
 
-body, .logo {
+body, .logo, .background {
     display: flex;
 }
 
 .background {
     background: no-repeat center / cover url(assets/halie-west-25xggax4bSA-unsplash.jpg);
+    position: relative;
+    width: 33%;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
 }
+
+.logo{
+    position: absolute;
+    top: 30%;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0 0 0 / 0.5);
+    width: 100%;
+    font-size: 5rem;
+    padding: 12px 0;
+    font-family: logo-font, sans-serif;
+}
+
+.icon{
+    width: 20%;
+}
+
+.watermark{
+    font-size: 14px;
+    font-weight: 100;
+    padding-bottom: 3%;
+    opacity: 0.8;
+}
+
+a{
+    color: white;
+}
+
