@@ -7,10 +7,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body{
     min-height: 100vh;
+    max-height: 100vh;
 }
 
 img{
@@ -19,14 +21,14 @@ img{
     max-height: 100%;
 }
 
-body, .logo, .background {
+body, .logo, .background, .info div {
     display: flex;
 }
 
 .background {
     background: no-repeat center / cover url(assets/halie-west-25xggax4bSA-unsplash.jpg);
     position: relative;
-    width: 33%;
+    width: 70%;
     align-items: flex-end;
     justify-content: center;
     color: white;
@@ -39,9 +41,12 @@ body, .logo, .background {
     align-items: center;
     background: rgb(0 0 0 / 0.5);
     width: 100%;
-    font-size: 5rem;
     padding: 12px 0;
+}
+
+h3{
     font-family: logo-font, sans-serif;
+    font-size: 5rem;
 }
 
 .icon{
@@ -62,4 +67,98 @@ body, .logo, .background {
 label{
     text-transform: uppercase;
 }
+
+.form{
+    padding: 56px 0;
+    background-color: #F3F4F6;
+}
+
+h4{
+    font-size: 24px;
+}
+
+h4, h5, label{
+    opacity: 0.85;
+}
+
+label{
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    font-size: 12px;
+    opacity: 75%;
+}
+
+.form > h4, h5, form > div{
+    padding: 0 48px;
+}
+
+.info{
+    background-color: white;
+    padding: 20px 48px 36px;
+    box-shadow: 4px 4px 4px #D6D6D6;
+}
+
+h4:first-child, .info > div:nth-child(2), .info > div:nth-child(3){
+    margin-bottom: 22px;
+}
+
+h4:nth-child(2){
+    margin-bottom: 48px;
+}
+
+.info > div > div {
+    flex-direction: column;
+    margin-right: 15%;
+    width: 32%;
+    gap: 4px;
+}
+
+input:invalid{
+    border-color: #BB2424;
+}
+
+input{
+    appearance: none;
+    border: 2px solid #E5E7EB;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 16px;
+}
+
+input:focus{
+    outline: none;
+    border-color: #6183E3;
+    box-shadow: 2px 2px 2px #D6D6D6;
+}
+
+form > div:last-child {
+    margin: 28px 0 30px;
+}
+
+button{
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    padding: 12px 36px;
+    background-color: #596D48;
+    color: white;
+}
+
+input + span {
+    position: relative;
+}
+
+input:required + span::after{
+    position: absolute;
+    top: -3px;
+    font-size: 0.65rem;
+    content: "* Passwords do not match";
+    color: red;
+}
+
+h5 a{
+    text-decoration: none;
+    color: #596D48;
+}
+
 
